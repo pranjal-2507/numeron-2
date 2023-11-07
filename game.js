@@ -149,7 +149,7 @@ function startTimer(){
     timerId = setInterval(()=>{
         time--
         if(time==0){
-            window.location.href = "./gameover.html"
+            window.location.href = "./gameover.html?score="+score;
         }
         timer.innerHTML = time;
     },1000);
