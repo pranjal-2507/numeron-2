@@ -65,7 +65,7 @@ function randomise(){
             num3 = num1 * num2;
             break;
         case 4:
-            num3 =num1 / num2;
+            num3 =Math.floor(num1 / num2);
             break;
         case 5:
             num3 = num1%num2;
@@ -96,7 +96,7 @@ minus.onclick = ()=>{
     if(num1-num2===num3){
         score++;
         randomise();
-        resetTimer()
+        resetTimer(timerId)
     }
     else{
         location.href= "./gameover.html?score="+score;
@@ -107,7 +107,7 @@ mul.onclick = ()=>{
     if(num1*num2===num3){
         score++;
         randomise();
-        resetTimer()
+        resetTimer(timerId)
     }
     else{
         location.href= "./gameover.html?score="+score;
@@ -118,7 +118,7 @@ divide.onclick = ()=>{
     if((num1/num2)==Math.floor(num3)){
         score++;
         randomise();
-        resetTimer()
+        resetTimer(timerId)
     }
     else{
         location.href= "./gameover.html?score="+score;
@@ -129,7 +129,7 @@ modulus.onclick = ()=>{
     if(num1%num2===num3){
         score++;
         randomise();
-        resetTimer()
+        resetTimer(timerId)
     }
     else{
         location.href= "./gameover.html?score="+score;
